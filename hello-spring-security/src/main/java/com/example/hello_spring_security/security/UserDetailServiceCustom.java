@@ -1,8 +1,7 @@
-package com.example.hello_spring_security.service;
+package com.example.hello_spring_security.security;
 
 import com.example.hello_spring_security.model.User;
 import com.example.hello_spring_security.repository.UserRepository;
-import com.example.hello_spring_security.security.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CustomUserDetailsService implements UserDetailsService {
+public class UserDetailServiceCustom implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
